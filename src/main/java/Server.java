@@ -20,7 +20,7 @@ public class Server {
 
         try {
             ServerSocket serverSocket = new ServerSocket(Integer.valueOf(System.getenv("PORT")));
-            System.out.println("Server started at " + Integer.valueOf(System.getenv("PORT"));
+            System.out.println("Server started at " + Integer.valueOf(System.getenv("PORT")));
             while (listening) {
                 new MultiServerThread(serverSocket.accept()).start();
             }
